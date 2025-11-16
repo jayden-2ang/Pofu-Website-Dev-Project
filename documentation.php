@@ -16,6 +16,8 @@
                 <li><a href="photography.html">Photography</a></li>
                 <li><a href="https://pofuphotos.smugmug.com/Client-Photos-">Gallery</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li><a href="sources.html">Sources</a></li>
             </ul>
         </nav>
     </header>
