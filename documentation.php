@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav>
-            <h1><a href="index.html">Pofu Photography</a></h1>
+            <h1><a href="index.php">Pofu Photography</a></h1>
             <ul>
                 <li><a href="photobooth.php">Photo Booth</a></li>
                 <li><a href="backdrops.php">Backdrops</a></li>
