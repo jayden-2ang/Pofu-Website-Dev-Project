@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pofu Photography</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
@@ -51,12 +52,12 @@
         <div id="gallery2"></div>
     <footer>
         <h2>Photo Booth & Event Photography</h2>
-        <a href="mailto:keith@pofuphotography.com">keith@pofuphotography.com</a><br>
-        <a href="tel:604-799-4901">(604)799.4901</a><br>
-        <a href="contact.html">
-            <button class="order" id="order">Contact Us!</button>
-        </a><br>
-        <p>New Westminster, BC, Canada</p>
+        <ul>
+            <li><a href="mailto:keith@pofuphotography.com">keith@pofuphotography.com</a></li><br>
+            <li><a href="tel:604-799-4901">(604)799.4901</a></li><br>
+            <li><a href="contact.html"><button class="order" id="order">Contact Us!</button></a></li><br>
+            <li><p>New Westminster, BC, Canada</p></li>
+        </ul>
     </footer>
 </body>
 </html>
