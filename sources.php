@@ -19,7 +19,9 @@
             </ul>
         </nav>
     </header>
-    
+    <p>Slideshow: https://www.w3schools.com/w3css/w3css_slideshow.asp
+        Images: https://www.pofuphotography.com/
+    </p>
     <footer>
         <h2>Photo Booth & Event Photography</h2>
         <ul>
