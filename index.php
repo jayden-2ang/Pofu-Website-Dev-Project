@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <style>
-        .mySlides {display:none;}
+        .mySlides {display: none;}
     </style>
 </head>
 <body>
@@ -78,7 +78,7 @@
             <li><a href="mailto:keith@pofuphotography.com">keith@pofuphotography.com</a></li><br>
             <li><a href="tel:604-799-4901">(604)799.4901</a></li><br>
             <li><a href="www.instagram.com/pofuphotography/">Instagram</a></li><br>
-            <li><a href="contact.html"><button class="order" id="order">Contact Us!</button></a></li><br>
+            <li><a href="contact.php"><button class="order" id="order">Contact Us!</button></a></li><br>
             <li><p>New Westminster, BC, Canada</p></li>
         </ul>
     </footer>
