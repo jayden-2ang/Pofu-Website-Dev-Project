@@ -12,7 +12,6 @@
             <h1><a href="index.php">Pofu Photography</a></h1>
             <ul>
                 <li><a href="photobooth.php">Photo Booth</a></li>
-                <li><a href="backdrops.php">Backdrops</a></li>
                 <li><a href="photography.php">Photography</a></li>
                 <li><a href="https://pofuphotos.smugmug.com/Client-Photos-">Gallery</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
