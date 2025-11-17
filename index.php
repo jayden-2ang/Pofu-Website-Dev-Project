@@ -24,39 +24,34 @@
             </ul>
         </nav>
     </header>
-    <div class="w3-container">
-  <h2>Slideshow Caption</h2>
-  <p>Add a caption text for each image slide with the w3-display-* classes (topleft, topmiddle, topright, bottomleft, bottommiddle, bottomright or middle).</p>
-</div>
 
-<div class="w3-content w3-display-container">
+<div class="w3-content w3-display-container" style="padding-top:50px">
 
     <div class="w3-display-container mySlides">
         <img src="images/photobooth1.jpeg" style="width:100%" alt="Photobooth Picture 1">
-        <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black"></div>
     </div>
 
     <div class="w3-display-container mySlides">
-        <img src="images/photobooth2.jpeg" style="width:100%" alt="Photobooth Picture 2">
-        <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black"></div>
+        <img src="images/photobooth2.webp" style="width:100%" alt="Photobooth Picture 2">
     </div>
 
     <div class="w3-display-container mySlides">
         <img src="images/photobooth3.jpeg" style="width:100%" alt="Photobooth Picture 3">
-        <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black"></div>
     </div>
 </div>
 
-<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-left w3-black" style="" onclick="plusDivs(-1)">&#10094;</button>
 <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
 
 </div>
     <div class="wrapper">
+        <img class="img1" src="images/photobooth4.jpeg" style="width:100%" alt="Photobooth Picture 4">
         <div class="div1">
             <h1><i>Instant Photo Prints</i></h1>
             <p>Open Air Photo Booth with customized design prints for you and your guests to enjoy and take home as a souvenir. 
                 This classic photobooth is a must at all events to add fun for all guests.</p>
         </div>
+        <img class="img2" src="images/photobooth5.webp" style="width:100%" alt="Photobooth Picture 5">
         <div class="div2">
             <h1><i>Portraits on White</i></h1>
             <p>Our B&W portraits are a timeless classic and is a photo worth putting in a frame and hanging as a memory at home. 
