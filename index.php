@@ -81,6 +81,7 @@
         <ul>
             <li><a href="mailto:keith@pofuphotography.com">keith@pofuphotography.com</a></li><br>
             <li><a href="tel:604-799-4901">(604)799.4901</a></li><br>
+            <li><a href="www.instagram.com/pofuphotography/">Instagram</a></li><br>
             <li><a href="contact.html"><button class="order" id="order">Contact Us!</button></a></li><br>
             <li><p>New Westminster, BC, Canada</p></li>
         </ul>
