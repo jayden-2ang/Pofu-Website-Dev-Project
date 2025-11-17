@@ -24,37 +24,46 @@
             </ul>
         </nav>
     </header>
-    <h1>Photography</h1>
+    <img class="pb2" src="images/photobooth2.webp" style="width:100%" alt="Photobooth Picture 2">
+    <div class="wrapper2">
+        <img id="machine" src="images/photomachine.webp" alt="Photobooth Machine">
         <div class="costs">
-            <p>$600 - 2 hours of Service<br>
-            Additional Hours $150<br>
-            $1600 All Day (up to 8 hours)<br>
-            *Travel outside of the Lower Mainland $75 Fee (Abbotsford & Chilliwack)<br>
-            <b>Service Includes</b><br>
-            Service Attendant<br>
-            Double 2x6 Prints or Single 4x6 Prints<br>
-            Instant Digital Prints via QR Codes or Emailing<br>
-            Premium Backdrop Selection<br>
-            Template Customization<br>
-            Emailing of photos<br>
-            Online Password Protected Photo Gallery (Includes Print & Original Copies)<br>
-            <b>Additional Options</b><br>
-            On-site additional hours: $199/hr<br>
-            Non-operational (breaktime) hours: $75/hr<br>
-            Duplicate prints: $45/hr<br>
-            Unlimited prints 4x6 (up to 10): $125/hour<br>
-            Unlimited prints 2x6 (up to 10): $75/hour<br>
+            <h1>Photo Booth</h1>
+            <p>$600 - 2 hours of Service<br><br>
+            Additional Hours $150<br><br>
+            $1600 All Day (up to 8 hours)<br><br>
+            *Travel outside of the Lower Mainland $75 Fee (Abbotsford & Chilliwack)<br><br>
+            <b>Service Includes</b><br><br>
+            Service Attendant<br><br>
+            Double 2x6 Prints or Single 4x6 Prints<br><br>
+            Instant Digital Prints via QR Codes or Emailing<br><br>
+            Premium Backdrop Selection<br><br>
+            Template Customization<br><br>
+            Emailing of photos<br><br>
+            Online Password Protected Photo Gallery (Includes Print & Original Copies)<br><br>
+            <b>Additional Options</b><br><br>
+            On-site additional hours: $199/hr<br><br>
+            Non-operational (breaktime) hours: $75/hr<br><br>
+            Duplicate prints: $45/hr<br><br>
+            Unlimited prints 4x6 (up to 10): $125/hour<br><br>
+            Unlimited prints 2x6 (up to 10): $75/hour<br><br>
             Single large photo on 6x4: $50/hr<br></p>
-            <a href="contact.html">
+            <a href="contact.php">
                 <button class="order" id="order">Order Now!</button>
             </a>
         </div>
-        <div>
+        <img id="printout" src="images/photo-booth-prints.jpeg" alt="Photo Printouts">
+        <div class="overlay">
             <h2>Customized Photo Overlays</h2>
             <p>We can do it all from specially designed print templates to branded 
             overlays so that your photos will be one-of-a-kind.</p>
         </div>
-        <div id="gallery2"></div>
+    </div>
+        <div id="backdrops">
+            <h1>Backdrops</h1>
+            <p>Check out the backdrops below to see our wide selection of backdrops!</p>
+
+        </div>
     <footer>
         <h2>Photo Booth & Event Photography</h2>
         <ul>

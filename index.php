@@ -25,7 +25,7 @@
         </nav>
     </header>
 
-<div class="w3-content w3-display-container" style="padding-top:50px">
+<div class="w3-content w3-display-container" style="padding-top: 50px">
 
     <div class="w3-display-container mySlides">
         <img src="images/photobooth1.jpeg" style="width:100%" alt="Photobooth Picture 1">
