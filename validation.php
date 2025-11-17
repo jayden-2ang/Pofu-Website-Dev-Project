@@ -2,7 +2,7 @@
 // Global result of form validation
 $valid = false;
 // Global array of validation messages. For valid fields, message is ""
-$val_messages = Array("email"=>"", "date"=>"", "animals"=>"");
+$val_messages = Array("fname"=>"", "lname"=>"", "email"=>"", "phone"=>"", "address"=>"", "city"=>"", "province"=>"", "postal"=>"");
 
 // Output the results if all fields are valid.
 function the_results()
@@ -12,15 +12,7 @@ function the_results()
   if($_SERVER["REQUEST_METHOD"]=="POST")
   {
     if($valid == true){
-      echo "<div class='results'>
-        <div class='result-text'> Your email address is: ". $_POST['email'] . "</div>
-        <div class='result-text'> Your favorite animals are: <ul>";
-         foreach($_POST['animals'] as $animal){
-          echo "<li>$animal</li>";
-        }
-         echo "</ul></div>
-        <div class='result-text'>Your favourite date is: " . $_POST['date'] . "</div>
-      </div>";
+      echo "<p>Thank you!<p>";
     }
   }
 }
