@@ -1,3 +1,15 @@
+<?php
+    // error reporting
+  error_reporting(E_ALL);
+  ini_set('display_errors', 1);
+
+  // Import functions
+  require_once('validation.php');
+
+  // Validate form submission
+  validate();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +36,88 @@
             </ul>
         </nav>
     </header>
-    
+    <div class="forms">
+        <h3>Feel free to contact me anytime if you have any questions or want further details about my services. I will get back to you within 24 hours :)</h3>
+        <form action="contact.php" method="get">
+            <fieldset>
+                <h4>Name (required)</h4>
+                <label>
+                    First Name
+                    <input type="text" name="fname" required>
+                    <?php the_validation_message('fname'); ?>
+                </label>
+                <label>
+                    Last Name
+                    <input type="text" name="lname" required>
+                    <?php the_validation_message('lname'); ?>
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" required>
+                    <?php the_validation_message('email'); ?>
+                </label>
+                <label>
+                    Phone
+                    <input type="tel" name="phone" required>
+                    <?php the_validation_message('phone'); ?>
+                </label>
+            </fieldset>
+            <fieldset>
+                <h4>Event Location (required)</h4>
+                <label>
+                    Address
+                    <input type="text" name="location" required>
+                    <?php the_validation_message('address'); ?>
+                </label>
+                <label>
+                    City
+                    <input type="text" name="city" required>
+                    <?php the_validation_message('city'); ?>
+                </label>
+                <label>
+                    Province
+                    <input type="text" name="province" required>
+                    <?php the_validation_message('province'); ?>
+                </label>
+                <label>
+                    Postal Code
+                    <input type="text" name="postal">
+                    <?php the_validation_message('postal'); ?>
+                </label>
+            </fieldset>
+            <label>
+                Day of Event
+                <input type="date" name="date" required>
+            </label>
+            <label>
+                Start Time of Event <br>*We will arrive 1 hour early for setup
+                <input type="time" name="start" required>
+            </label>
+            <label>
+                End Time of Event
+                <input type="time" name="end" required>
+            </label>
+            <label>
+                Service
+                <select name="service" required>
+                    <option value="photography">Event Photography</option>
+                    <option value="wedding">Wedding Photography</option>
+                    <option value="photobooth">Photo Booth</option>
+                    <option value="other">Other</option>
+                </select>
+            </label>
+            <label>
+                Photo Booth 
+            </label>
+            <label>
+                Additional Details
+                <textarea id="details" name="details" rows="4" cols="50"></textarea>
+            </label>
+            <input type="submit" value="Submit">
+        </form>
+        <!-- Display the results -->
+        <?php the_results(); ?>
+    </div>
     <footer>
         <h2>Photo Booth & Event Photography</h2>
         <ul>
