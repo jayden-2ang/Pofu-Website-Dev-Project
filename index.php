@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pofu Photography</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <style>
+        .mySlides {display:none;}
+    </style>
 </head>
 <body>
     <header>
         <nav>
-            <h1><a href="index.php">Pofu Photography</a></h1>
             <ul>
+                <li><a href="index.php"><img src="images/logo.png" style="width:30%"></a></li>
                 <li><a href="photobooth.php">Photo Booth</a></li>
                 <li><a href="photography.php">Photography</a></li>
                 <li><a href="https://pofuphotos.smugmug.com/Client-Photos-">Gallery</a></li>
@@ -20,36 +24,33 @@
             </ul>
         </nav>
     </header>
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="img1.jpg" style="width:100%">
-            <div class="text">Caption Text</div>
-        </div>
+    <div class="w3-container">
+  <h2>Slideshow Caption</h2>
+  <p>Add a caption text for each image slide with the w3-display-* classes (topleft, topmiddle, topright, bottomleft, bottommiddle, bottomright or middle).</p>
+</div>
 
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="img2.jpg" style="width:100%">
-            <div class="text">Caption Two</div>
-        </div>
+<div class="w3-content w3-display-container">
 
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="img3.jpg" style="width:100%">
-            <div class="text">Caption Three</div>
-        </div>
-
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="w3-display-container mySlides">
+        <img src="images/photobooth1.jpeg" style="width:100%" alt="Photobooth Picture 1">
+        <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black"></div>
     </div>
-    <br>
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
+
+    <div class="w3-display-container mySlides">
+        <img src="images/photobooth2.jpeg" style="width:100%" alt="Photobooth Picture 2">
+        <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black"></div>
     </div>
+
+    <div class="w3-display-container mySlides">
+        <img src="images/photobooth3.jpeg" style="width:100%" alt="Photobooth Picture 3">
+        <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black"></div>
+    </div>
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
     <div class="wrapper">
         <div class="div1">
             <h1><i>Instant Photo Prints</i></h1>
@@ -86,5 +87,24 @@
             <li><p>New Westminster, BC, Canada</p></li>
         </ul>
     </footer>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+        }
+    </script>
 </body>
 </html>
