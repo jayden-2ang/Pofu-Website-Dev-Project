@@ -18,21 +18,19 @@
     <title>Pofu Photography</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-    <style>
-        .mySlides {display: none;}
-    </style>
+    <script src="index.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.php"><img src="images/logo.png" style="width:30%"></a></li>
-                <li><a href="photobooth.php">Photo Booth</a></li>
-                <li><a href="photography.php">Photography</a></li>
+                <li><a href="index.html"><img src="images/logo.png" style="width:30%"></a></li>
+                <li><a href="photobooth.html">Photo Booth</a></li>
+                <li><a href="photography.html">Photography</a></li>
                 <li><a href="https://pofuphotos.smugmug.com/Client-Photos-">Gallery</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
-                <li><a href="documentation.php">Documentation</a></li>
-                <li><a href="sources.php">Sources</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li><a href="sources.html">Sources</a></li>
             </ul>
         </nav>
     </header>
