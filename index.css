@@ -273,3 +273,43 @@ footer ul{
     height: 100%;
     width: 100%;
 }
+
+.backdrops{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto repeat(3, 1fr);
+    grid-gap: 80px;
+    padding: 20px;
+}
+
+.backdrops h1{
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+.backdrops p{
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+
+.backdrops figure{
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+.backdrops figure img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.backdrops figure figcaption{
+    object-position: bottom;
+}
+
+
+@media screen {
+    
+}
