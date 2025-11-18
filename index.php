@@ -9,11 +9,5 @@ $pdo = db_connect();
 // submit response to database
 handle_form_submission();
 
-
-// Get comments from database
-get_comments();
-// Get commenters from database
-get_commenters();
-
 // include the template to display the page
 include 'templates/index.html';

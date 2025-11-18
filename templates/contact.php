@@ -4,7 +4,7 @@
   ini_set('display_errors', 1);
 
   // Import functions
-  require_once('validation.php');
+  require_once('../database/database.php');
 
   // Validate form submission
   validate();
