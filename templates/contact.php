@@ -40,78 +40,80 @@
             <fieldset id="forms1">
                 <h4>Name (required)</h4>
                 <label>
-                    First Name
+                    <p>First Name</p>
                     <input type="text" name="fname" required>
                     <?php the_validation_message('fname'); ?>
-                </label><br><br>
+                </label>
                 <label>
-                    Last Name
+                    <p>Last Name</p>
                     <input type="text" name="lname" required>
                     <?php the_validation_message('lname'); ?>
-                </label><br><br>
+                </label>
                 <label>
-                    Email
+                    <p>Email</p>
                     <input type="email" name="email" required>
                     <?php the_validation_message('email'); ?>
-                </label><br><br>
+                </label>
                 <label>
-                    Phone
+                    <p>Phone</p>
                     <input type="tel" name="phone" required>
                     <?php the_validation_message('phone'); ?>
-                </label><br><br>
+                </label>
             </fieldset>
             <fieldset id="forms2">
                 <h4>Event Location (required)</h4>
                 <label>
-                    Address
+                    <p>Address</p>
                     <input type="text" name="location" required>
                     <?php the_validation_message('address'); ?>
-                </label><br><br>
+                </label>
                 <label>
-                    City
+                    <p>City</p>
                     <input type="text" name="city" required>
                     <?php the_validation_message('city'); ?>
-                </label><br><br>
+                </label>
                 <label>
-                    Province
+                    <p>Province</p>
                     <input type="text" name="province" required>
                     <?php the_validation_message('province'); ?>
-                </label><br><br>
+                </label>
                 <label>
-                    Postal Code
+                    <p>Postal Code</p>
                     <input type="text" name="postal" required>
                     <?php the_validation_message('postal'); ?>
-                </label><br><br>
+                </label>
             </fieldset>
             <fieldset id="forms3">
                 <label>
-                    Day of Event
+                    <p>Day of Event</p>
                     <input type="date" name="date" required>
-                </label><br><br>
+                </label>
                 <label>
-                    Start Time of Event <br> *We will arrive 1 hour early for setup <br>
+                    <p>Start Time of Event</p>
                     <input type="time" name="start" required>
-                </label><br><br>
+                    <br><h6>*We will arrive 1 hour early for setup</h6>
+                </label>
                 <label>
-                    End Time of Event
+                    <p>End Time of Event</p>
                     <input type="time" name="end" required>
-                </label><br><br>
+                </label>
                 <label>
-                    Service
+                    <p>Service</p>
                     <select name="service" required>
                         <option value="photography">Event Photography</option>
                         <option value="wedding">Wedding Photography</option>
                         <option value="photobooth">Photo Booth</option>
                         <option value="other">Other</option>
                     </select>
-                </label><br><br>
-                <label>
-                    Photo Booth 
                 </label>
                 <label>
-                    Additional Details
+                    <p>Photo Booth Backdrop</p>
+                    <select></select>
+                </label>
+                <label>
+                    <p>Additional Details</p>
                     <textarea id="details" name="details" rows="4" cols="50"></textarea>
-                </label><br><br>
+                </label>
                 <input type="submit" value="Submit">
             </fieldset>
         </div>
