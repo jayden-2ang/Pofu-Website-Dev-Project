@@ -43,7 +43,7 @@
         <div class="forms">
             <h3>Feel free to contact me anytime if you have any questions or want further details about my services. I will get back to you within 24 hours :)</h3>
             <fieldset id="forms1">
-                <h4>Name (required)</h4>
+                <h2>Name (required)</h2>
                 <label>
                     <p>First Name</p>
                     <input type="text" name="fName" required>
@@ -66,7 +66,7 @@
                 </label>
             </fieldset>
             <fieldset id="forms2">
-                <h4>Event Location (required)</h4>
+                <h2>Event Location (required)</h2>
                 <label>
                     <p>Address</p>
                     <input type="text" name="location" required>
@@ -96,8 +96,8 @@
                 </label>
                 <label>
                     <p>Start Time of Event</p>
+                    <h7>*We will arrive 1 hour early for setup</h7><br>
                     <input type="time" name="start" required>
-                    <br><h6>*We will arrive 1 hour early for setup</h6>
                     <?php the_validation_message('start'); ?>
                 </label>
                 <label>
