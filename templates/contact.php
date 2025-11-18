@@ -137,7 +137,7 @@
                 </label>
                 <label>
                     <p>Additional Details</p>
-                    <textarea id="details" name="details" rows="4" cols="50"></textarea>
+                    <textarea id="details" name="details"></textarea>
                 </label>
                 <input type="submit" value="Submit" id="submit">
             </fieldset>

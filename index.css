@@ -27,45 +27,16 @@ nav a{
     display: grid;
     background-color: white;
     justify-content: center;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: auto;
     grid-template-rows: auto;
     grid-gap: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
-.wrapper .div1{
-    grid-column: 3/5;
-    grid-row: 1/3;
-}
-
-.wrapper .img1{
-    grid-column: 1/3;
-    grid-row: 1/3;
-}
-
-.wrapper .div2{
-    grid-column: 1/3;
-    grid-row: 3/4;
-}
-.wrapper .img2{
-    grid-column: 3/5;
-    grid-row: 3/5;
-}
-
-.wrapper .div3{
-    grid-column: 2/4;
-    grid-row: 5/6;
-    justify-self: center;
-}
-
-#pb2{
-    padding-bottom: 50px;
-}
-
 .wrapper2{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     border-top: solid 1px black;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -74,54 +45,99 @@ nav a{
 }
 
 .wrapper2 #machine{
-    grid-column: 2/3;
-    grid-row: 1/2;
     width: 100%;
     height: 100%;
-}
-
-.wrapper2 .costs{
-    grid-column: 1/2;
-    grid-row: 1/2;
 }
 
 .wrapper2 #printout{
-    grid-column: 1/2;
-    grid-row: 2/3;
     width: 100%;
     height: 100%;
 }
 
-.wrapper2 .overlay{
-    grid-column: 2/3;
-    grid-row: 2/3;
+.photography{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+    padding: 20px;
 }
 
-.costs a button{
+.photography #header{
+    object-position: bottom;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.photography .text{
+    text-align: center;
+    background-color: white;
+}
+
+.photography .text h3{
+    padding: 40px;
+}
+
+.photography #juno{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.photography .pricing{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.photography .pricing::before{
+    content: '';
+    background-image: url(./images/pricing.jpeg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.photography .pricing h3{
+    padding: 30px;
+}
+
+.photography img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.backdrops{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+.backdrops figure{
     display: block;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
+}
+
+.backdrops figure img{
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
+.backdrops figure figcaption{
+    text-align: center;
 }
 
 ul li, h1, h2, h3, h4, p{
     text-align: center;
-}
-
-footer{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-top: solid black 1px;
-    padding-top: 50px;
-}
-
-footer h2{
-    grid-column: 2/3;
-    grid-row: 1/2;
-}
-
-footer ul{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    list-style-type: none;
 }
 
 .forms{
@@ -173,26 +189,10 @@ footer ul{
     padding: 20px;
 }
 
-.forms #forms3 label p{
-    grid-column: 1/3;
-    justify-self: center;
-}
-
-.forms #forms3 label input{
-    grid-column: 1/3;
-    justify-self: center;
-}
-
-.forms #forms3 label h7{
-    grid-column: 1/3;
-    justify-self: center;
-}
-
-.forms #forms3 label select{
-    grid-column: 1/3;
-    justify-self: center;
-}
-
+.forms #forms3 label p,
+.forms #forms3 label input,
+.forms #forms3 label h7,
+.forms #forms3 label select,
 .forms #forms3 label textarea{
     grid-column: 1/3;
     justify-self: center;
@@ -207,109 +207,137 @@ footer ul{
     margin: 0 auto;
 }
 
-.photography{
+footer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 700px repeat(2, 1fr);
-    grid-gap: 50px;
-    padding: 20px;
+    border-top: solid black 1px;
+    padding-top: 50px;
 }
 
-.photography #header{
-    grid-column: 1/4;
-    grid-row: 1/2;
-    object-position: bottom;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    padding-bottom: 40px;
-}
-
-.photography .text{
-    grid-column: 1/3;
-    grid-row: 2/3;
-    text-align: center;
-    background-color: white;
-}
-
-.photography .text h3{
-    padding: 40px;
-}
-
-.photography #juno{
-    grid-column: 3/4;
-    grid-row: 2/3;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-
-.photography .pricing{
-    grid-column: 1/4;
-    grid-row: 3/4;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
-.photography .pricing::before{
-    content: '';
-    background-image: url(./images/pricing.jpeg);
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    opacity: 0.5;
-    z-index: -1;
-}
-
-.photography .pricing h3{
-    padding: 30px;
-}
-
-.photography img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-
-.backdrops{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto repeat(3, 1fr);
-    grid-gap: 80px;
-    padding: 20px;
-}
-
-.backdrops h1{
-    grid-column: 1/4;
+footer h2{
+    grid-column: 2/3;
     grid-row: 1/2;
 }
 
-.backdrops p{
-    grid-column: 1/4;
+footer ul{
+    grid-column: 2/3;
     grid-row: 2/3;
+    list-style-type: none;
 }
 
-.backdrops figure{
-    display: block;
-    width: 100%;
-    margin: 0;
+@media (min-width: 600px) {
+  .backdrops {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.backdrops figure img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    display: block;
-}
+@media (min-width: 900px) {
+    .backdrops {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto repeat(3, 1fr);
+        grid-gap: 80px;
+        padding: 20px;
+    }
 
-.backdrops figure figcaption{
-    object-position: bottom;
-}
+    .backdrops h1 {
+        grid-column: 1 / 4;
+        grid-row: 1;
+    }
 
+        .backdrops p {
+        grid-column: 1 / 4;
+        grid-row: 2;
+    }
 
-@media screen {
-    
+    .wrapper{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .wrapper .div1{
+        grid-column: 3/5;
+        grid-row: 1/3;
+    }
+
+    .wrapper .img1{
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+
+    .wrapper .div2{
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    .wrapper .img2{
+        grid-column: 3/5;
+        grid-row: 3/5;
+    }
+
+    .wrapper .div3{
+        grid-column: 2/4;
+        grid-row: 5/6;
+        justify-self: center;
+    }
+
+    #pb2{
+        padding-bottom: 50px;
+    }
+
+    .wrapper2{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wrapper2 #machine{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .wrapper2 .costs{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    .wrapper2 #printout{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .wrapper2 .overlay{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .photography{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 700px repeat(2, 1fr);
+    }
+
+    .photography #header{
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+
+    .photography .text{
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    .photography #juno{
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+
+    .photography .pricing{
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+
+    .backdrops{
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .backdrops h1,
+    .backdrops p {
+        grid-column: 1;
+    }
 }
