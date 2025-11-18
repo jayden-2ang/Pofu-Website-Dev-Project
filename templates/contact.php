@@ -24,7 +24,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html"><img src="../images/logo.png" style="width:30%"></a></li>
+                <li><a href="index.html"><img src="../images/logo.png" style="width:20%"></a></li>
                 <li><a href="photobooth.html">Photo Booth</a></li>
                 <li><a href="photography.html">Photography</a></li>
                 <li><a href="https://pofuphotos.smugmug.com/Client-Photos-">Gallery</a></li>
@@ -34,31 +34,31 @@
             </ul>
         </nav>
     </header>
-    <div class="forms">
-        <h3>Feel free to contact me anytime if you have any questions or want further details about my services. I will get back to you within 24 hours :)</h3>
-        <form action="contact.php" method="get">
+    <form action="contact.php" method="get">
+        <div class="forms">
+            <h3>Feel free to contact me anytime if you have any questions or want further details about my services. I will get back to you within 24 hours :)</h3>
             <fieldset id="forms1">
                 <h4>Name (required)</h4>
                 <label>
                     First Name
                     <input type="text" name="fname" required>
                     <?php the_validation_message('fname'); ?>
-                </label>
+                </label><br><br>
                 <label>
                     Last Name
                     <input type="text" name="lname" required>
                     <?php the_validation_message('lname'); ?>
-                </label>
+                </label><br><br>
                 <label>
                     Email
                     <input type="email" name="email" required>
                     <?php the_validation_message('email'); ?>
-                </label>
+                </label><br><br>
                 <label>
                     Phone
                     <input type="tel" name="phone" required>
                     <?php the_validation_message('phone'); ?>
-                </label>
+                </label><br><br>
             </fieldset>
             <fieldset id="forms2">
                 <h4>Event Location (required)</h4>
@@ -66,36 +66,36 @@
                     Address
                     <input type="text" name="location" required>
                     <?php the_validation_message('address'); ?>
-                </label>
+                </label><br><br>
                 <label>
                     City
                     <input type="text" name="city" required>
                     <?php the_validation_message('city'); ?>
-                </label>
+                </label><br><br>
                 <label>
                     Province
                     <input type="text" name="province" required>
                     <?php the_validation_message('province'); ?>
-                </label>
+                </label><br><br>
                 <label>
                     Postal Code
-                    <input type="text" name="postal">
+                    <input type="text" name="postal" required>
                     <?php the_validation_message('postal'); ?>
-                </label>
+                </label><br><br>
             </fieldset>
             <fieldset id="forms3">
                 <label>
                     Day of Event
                     <input type="date" name="date" required>
-                </label>
+                </label><br><br>
                 <label>
-                    Start Time of Event <br>*We will arrive 1 hour early for setup
+                    Start Time of Event <br> *We will arrive 1 hour early for setup <br>
                     <input type="time" name="start" required>
-                </label>
+                </label><br><br>
                 <label>
                     End Time of Event
                     <input type="time" name="end" required>
-                </label>
+                </label><br><br>
                 <label>
                     Service
                     <select name="service" required>
@@ -104,20 +104,20 @@
                         <option value="photobooth">Photo Booth</option>
                         <option value="other">Other</option>
                     </select>
-                </label>
+                </label><br><br>
                 <label>
                     Photo Booth 
                 </label>
                 <label>
                     Additional Details
                     <textarea id="details" name="details" rows="4" cols="50"></textarea>
-                </label>
+                </label><br><br>
                 <input type="submit" value="Submit">
             </fieldset>
-        </form>
-        <!-- Display the results -->
-        <?php the_results(); ?>
-    </div>
+        </div>
+    </form>
+    <!-- Display the results -->
+    <?php the_results(); ?>
     <footer>
         <h2>Photo Booth & Event Photography</h2>
         <ul>

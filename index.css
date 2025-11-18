@@ -122,12 +122,14 @@ footer ul{
 .forms{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: auto, repeat(3, 1fr);
+    background-color: whitesmoke;
 }
 
 .forms h3{
     grid-row: 1/2;
     grid-column: 2/3;
+    padding-bottom: 20px;
 }
 
 .forms #forms1{
@@ -143,4 +145,8 @@ footer ul{
 .forms #forms3{
     grid-row: 4/5;
     grid-column: 2/3;
+}
+
+.forms fieldset{
+    padding: 20px;
 }
