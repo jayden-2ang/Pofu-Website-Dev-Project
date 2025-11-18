@@ -6,13 +6,15 @@
     <title>Pofu Photography</title>
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-    <script src="../index.js"></script>
+    <style>
+        .mySlides {display: none;}
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html"><img src="images/logo.png" style="width:30%"></a></li>
+                <li><a href="index.html"><img src="../images/logo.png" style="width:30%"></a></li>
                 <li><a href="photobooth.html">Photo Booth</a></li>
                 <li><a href="photography.html">Photography</a></li>
                 <li><a href="https://pofuphotos.smugmug.com/Client-Photos-">Gallery</a></li>
@@ -26,15 +28,15 @@
 <div class="w3-content w3-display-container" style="padding-top: 50px">
 
     <div class="w3-display-container mySlides">
-        <img src="images/photobooth1.jpeg" style="width:100%" alt="Photobooth Picture 1">
+        <img src="../images/photobooth1.jpeg" style="width:100%" alt="Photobooth Picture 1">
     </div>
 
     <div class="w3-display-container mySlides">
-        <img src="images/photobooth2.webp" style="width:100%" alt="Photobooth Picture 2">
+        <img src="../images/photobooth2.webp" style="width:100%" alt="Photobooth Picture 2">
     </div>
 
     <div class="w3-display-container mySlides">
-        <img src="images/photobooth3.jpeg" style="width:100%" alt="Photobooth Picture 3">
+        <img src="../images/photobooth3.jpeg" style="width:100%" alt="Photobooth Picture 3">
     </div>
 </div>
 
@@ -43,13 +45,13 @@
 
 </div>
     <div class="wrapper">
-        <img class="img1" src="images/photobooth4.jpeg" style="width:100%" alt="Photobooth Picture 4">
+        <img class="img1" src="../images/photobooth4.jpeg" style="width:100%" alt="Photobooth Picture 4">
         <div class="div1">
             <h1><i>Instant Photo Prints</i></h1>
             <p>Open Air Photo Booth with customized design prints for you and your guests to enjoy and take home as a souvenir. 
                 This classic photobooth is a must at all events to add fun for all guests.</p>
         </div>
-        <img class="img2" src="images/photobooth5.webp" style="width:100%" alt="Photobooth Picture 5">
+        <img class="img2" src="../images/photobooth5.webp" style="width:100%" alt="Photobooth Picture 5">
         <div class="div2">
             <h1><i>Portraits on White</i></h1>
             <p>Our B&W portraits are a timeless classic and is a photo worth putting in a frame and hanging as a memory at home. 
@@ -80,5 +82,24 @@
             <li><p>New Westminster, BC, Canada</p></li>
         </ul>
     </footer>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+        }
+    </script>
 </body>
 </html>
