@@ -1,13 +1,19 @@
 <?php
     // error reporting
-  error_reporting(E_ALL);
-  ini_set('display_errors', 1);
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
 
-  // Import functions
-  require_once('../database/database.php');
+    // Import functions
+    require '../database/database.php';
 
-  // Validate form submission
-  validate();
+    $pdo = db_connect();      
+    validate();               
+
+    if ($valid) {
+        handle_form_submission();  
+    }
+
+    the_results();         
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +24,6 @@
     <title>Pofu Photography</title>
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-    <script src="../index.js"></script>
 </head>
 <body>
     <header>
@@ -41,13 +46,13 @@
                 <h4>Name (required)</h4>
                 <label>
                     <p>First Name</p>
-                    <input type="text" name="fname" required>
-                    <?php the_validation_message('fname'); ?>
+                    <input type="text" name="fName" required>
+                    <?php the_validation_message('fName'); ?>
                 </label>
                 <label>
                     <p>Last Name</p>
-                    <input type="text" name="lname" required>
-                    <?php the_validation_message('lname'); ?>
+                    <input type="text" name="lName" required>
+                    <?php the_validation_message('lName'); ?>
                 </label>
                 <label>
                     <p>Email</p>
@@ -87,24 +92,29 @@
                 <label>
                     <p>Day of Event</p>
                     <input type="date" name="date" required>
+                    <?php the_validation_message('date'); ?>
                 </label>
                 <label>
                     <p>Start Time of Event</p>
                     <input type="time" name="start" required>
                     <br><h6>*We will arrive 1 hour early for setup</h6>
+                    <?php the_validation_message('start'); ?>
                 </label>
                 <label>
                     <p>End Time of Event</p>
                     <input type="time" name="end" required>
+                    <?php the_validation_message('end'); ?>
                 </label>
                 <label>
                     <p>Service</p>
                     <select name="service" required>
+                        <option value="">Select a Service</option>
                         <option value="photography">Event Photography</option>
                         <option value="wedding">Wedding Photography</option>
                         <option value="photobooth">Photo Booth</option>
                         <option value="other">Other</option>
                     </select>
+                    <?php the_validation_message('service'); ?>
                 </label>
                 <label>
                     <p>Photo Booth Backdrop</p>
@@ -121,7 +131,7 @@
                     </select>
                 </label>
                 <label id="name">
-                    <select id="backdropName">
+                    <select id="backdropName" name="backdropName">
                         <option value="">Select the name of your backdrop</option>
                     </select>
                 </label>
