@@ -108,13 +108,28 @@
                 </label>
                 <label>
                     <p>Photo Booth Backdrop</p>
-                    <select></select>
+                    <select id="backdropType">
+                        <option value="">Select a type of Backdrop</option>
+                        <option value="sparkle">Sparkle Backdrops</option>
+                        <option value="sequin">Sequin Backdrops</option>
+                        <option value="deco">Deco Backdrops</option>
+                        <option value="light">Light Backdrops</option>
+                        <option value="floral">Floral Backdrops</option>
+                        <option value="unique">Unique Backdrops</option>
+                        <option value="brushed">Brushed Backdrops</option>
+                        <option value="festive">Festive Backdrops</option>
+                    </select>
+                </label>
+                <label id="name">
+                    <select id="backdropName">
+                        <option value="">Select the name of your backdrop</option>
+                    </select>
                 </label>
                 <label>
                     <p>Additional Details</p>
                     <textarea id="details" name="details" rows="4" cols="50"></textarea>
                 </label>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" id="submit">
             </fieldset>
         </div>
     </form>
@@ -130,5 +145,38 @@
             <li><p>New Westminster, BC, Canada</p></li>
         </ul>
     </footer>
+    <script>
+        const backdropSelect = document.getElementById('backdropType');
+        const nameSelect = document.getElementById('backdropName');
+
+        // Define your data structure
+        const data = {
+            sparkle: ['Silver Sparkle', 'Gold Sparkle', 'Black Sparkle', 'Sapphire Sparkle', 'Dark Glimmer', 'Rose Gold Glitter'],
+            sequin: ['Black Sequin', 'Gold Sequin', 'Red Sequin', 'Silver Sequin', 'Rose Gold Sequin', 'Unicorn Sequin', 'Crimson Red Sequin', 'Deep Gold Sequin', 'White Petal Sequin'],
+            deco: ['White & Gold Deco', 'Black & Gold Deco', 'Blue & Yellow Deco', 'Mixed Deco'],
+            light: ['Warm Lights', 'Bokeh Lights', 'Bright Lights', 'Wood with Lights'],
+            floral: ['Wood with Vines', 'Flower Blossom', 'Barn Door with Vines', 'Green Bush', 'White Roses', 'Light Pink Flowers'],
+            unique: ['White & Gold Mermaid', 'White Marble', 'Golden Lattice'],
+            brushed: ['Brushed White to Purple', 'Brushed Turquoise to Indigo', 'Brushed White to Black'],
+            festive: ['Classic Christmas', 'By the Fireplace', 'Christmas Ornaments', 'Gold Snowflakes Ornaments', 'Christmas Wreath', 'Glittery Red Snowflakes']
+        };
+
+        backdropSelect.addEventListener('change', function() {
+            const selectedCategory = this.value; // Get the value of the selected category
+            nameSelect.innerHTML = '<option value="">Select an Item</option>'; // Clear existing options
+
+            if (selectedCategory) {
+                const items = data[selectedCategory]; // Get items for the selected category
+                if (items) {
+                    items.forEach(item => {
+                        const option = document.createElement('option');
+                        option.value = item.toLowerCase(); // Use lowercase for value
+                        option.textContent = item;
+                        nameSelect.appendChild(option);
+                    });
+                }
+            }
+        });
+    </script>
 </body>
 </html>
