@@ -19,8 +19,26 @@ nav ul li{
     font-size: larger;
 }
 
-nav a{
+nav ul li a{
     text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    height: 4px;
+    width: 100%;
+    background: rgb(255,255,255);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    opacity: 0;
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+nav ul li:not(:first-of-type) a:hover::after{
+    opacity: 1;
 }
 
 .wrapper{
