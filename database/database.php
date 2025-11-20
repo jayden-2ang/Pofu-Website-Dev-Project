@@ -4,7 +4,7 @@ require 'config.php';
 // Global result of form validation
 $valid = false;
 // Global array of validation messages. For valid fields, message is ""
-$val_messages = Array("fname"=>"", "lname"=>"", "email"=>"", "phone"=>"", "address"=>"", "city"=>"", "province"=>"", "postal"=>"", "date"=>"", "start"=>"", "end"=>"", "service"=>"");
+$val_messages = Array("fName"=>"", "lName"=>"", "email"=>"", "phone"=>"", "address"=>"", "city"=>"", "province"=>"", "postal"=>"", "date"=>"", "start"=>"", "end"=>"", "service"=>"");
 
 // Should return a PDO
 function db_connect() {
@@ -70,11 +70,11 @@ function validate()
         $val_messages['email'] = "<div class='failure-message'>Please make sure that you input a proper email address.</div>";
       }
       //Phone Number Validation
-      if(preg_match('/^\d{3}-\d{3}-\d{4}$/', $_POST['phone'])){
+      if(preg_match('/^\d{3}\d{3}\d{4}$/', $_POST['phone'])){
         $phone_valid = true;
       }
       else{
-        $val_messages['phone'] = "<div class='failure-message'> Please make sure your phone number follows the format 123-456-7890.</div>";
+        $val_messages['phone'] = "<div class='failure-message'> Please make sure your phone number follows the format 1234567890.</div>";
       }
       //Address Validation
       if(strlen($_POST['address']) > 5){
@@ -98,14 +98,14 @@ function validate()
         $val_messages['province'] = "<div class='failure-message'> Please make sure your province has 2 characters.</div>";
       }
       //Postal Code Validation
-      if(preg_match('/^[A-Za-z]\d[A-Za-z]\d[A-Za-z]\d$/', $_POST['postal'])){
+      if(preg_match('/^([A-Za-z]\d[A-Za-z]) ?(\d[A-Za-z]\d)$/', $_POST['postal'])){
         $postal_valid = true;
       }
       else{
         $val_messages['postal'] = "<div class='failure-message'> Please make sure your postal code follows the format A1A 1A1.</div>";
       }
       //Date Validation
-      if(preg_match('#^\d{4}/((0[1-9])|(1[0-2]))/((0[1-9])|([12][0-9])|(3[01]))$#', $_POST['date'])){
+      if(isset($_POST['date'])){
         $date_valid = true;
       }
       else{
@@ -148,6 +148,7 @@ function the_validation_message($type) {
   {
     if(isset($type) && $valid == false){
       echo $val_messages[$type];
+      
     }
   }
 }
@@ -155,7 +156,6 @@ function the_validation_message($type) {
 // Handle form submission
 function handle_form_submission() {
   global $pdo;
-
     $sql = "INSERT INTO responses (FName, LName, Email, Phone, Address, City, Province, PostalCode, Date, Start, End, Service, Backdrop, Details) VALUES (:fName, :lName, :email, :phone, :address, :city, :province, :postal, :date, :start, :end, :service, :backdropName, :details)";
     
     $statement = $pdo->prepare($sql);
@@ -175,19 +175,9 @@ function handle_form_submission() {
     $statement->bindValue(':backdropName', $_POST['backdropName'] ?? '');
     $statement->bindValue(':details', $_POST['details'] ?? '');
     $statement->execute();
+    $submitMessage = "Thank You! Your response has been submitted.";
+    echo "<script>alert('$submitMessage');</script>";
     header('Location: index.html');
-}
-
-// Output the results if all fields are valid.
-function the_results()
-{
-  global $valid;
-
-  if($_SERVER["REQUEST_METHOD"]=="POST")
-  {
-    if($valid == true){
-      echo "<p>Thank you!<p>";
-    }
-  }
+    exit();
 }
 ?>

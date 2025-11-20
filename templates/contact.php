@@ -11,9 +11,7 @@
 
     if ($valid) {
         handle_form_submission();  
-    }
-
-    the_results();         
+    }     
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +37,7 @@
             </ul>
         </nav>
     </header>
-    <form action="contact.php" method="get">
+    <form action="contact.php" method="post" id="responseForm">
         <div class="forms">
             <h3>Feel free to contact me anytime if you have any questions or want further details about my services. I will get back to you within 24 hours :)</h3>
             <fieldset id="forms1">
@@ -69,7 +67,7 @@
                 <h2>Event Location (required)</h2>
                 <label>
                     <p>Address</p>
-                    <input type="text" name="location" required>
+                    <input type="text" name="address" required>
                     <?php the_validation_message('address'); ?>
                 </label>
                 <label>
@@ -143,8 +141,6 @@
             </fieldset>
         </div>
     </form>
-    <!-- Display the results -->
-    <?php the_results(); ?>
     <footer>
         <h2>Photo Booth & Event Photography</h2>
         <ul>
