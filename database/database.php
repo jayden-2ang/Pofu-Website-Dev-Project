@@ -177,7 +177,6 @@ function handle_form_submission() {
     $statement->execute();
     $submitMessage = "Thank You! Your response has been submitted.";
     echo "<script>alert('$submitMessage');</script>";
-    header('Location: index.html');
     exit();
 }
 ?>

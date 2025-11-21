@@ -20,6 +20,7 @@ nav ul li{
 }
 
 nav ul li a{
+    display: flex;
     text-decoration: none;
     position: relative;
 }
@@ -62,9 +63,21 @@ nav ul li:not(:first-of-type) a:hover::after{
     grid-gap: 50px;
 }
 
-.wrapper2 #machine{
-    width: 100%;
+.wrapper2 .costs{
+    object-fit: cover;
     height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper2 .costs::before{
+    content: '';
+    background-image: url(./images/photomachine.webp);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.5;
 }
 
 .wrapper2 #printout{
@@ -244,6 +257,10 @@ footer ul{
 }
 
 @media (min-width: 600px) {
+    nav ul li a{
+        display: inline;
+    }
+
   .backdrops {
     grid-template-columns: repeat(2, 1fr);
   }
