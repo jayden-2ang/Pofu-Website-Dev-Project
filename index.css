@@ -367,12 +367,18 @@ footer ul{
     }
 
     .backdrops{
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
     }
 
-    .backdrops h1,
-    .backdrops p {
-        grid-column: 1;
+    .backdrops h1
+    {
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+
+    .backdrops p{
+        grid-column: 1/4;
+        grid-row: 2/3;
     }
 }
