@@ -6,6 +6,9 @@
     <title>Pofu Photography</title>
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <style>
+        .mySlides {display: none;}
+    </style>
 </head>
 <body>
     <header>
@@ -21,7 +24,22 @@
             </ul>
         </nav>
     </header>
-    <img class="pb2" src="../images/photobooth2.webp" style="width:100%" alt="Photobooth Picture 2">
+    <div class="w3-content w3-display-container" style="padding-top: 50px">
+
+        <div class="w3-display-container mySlides">
+            <img src="../images/photobooth1.jpeg" style="width:100%" alt="Photobooth Picture 1">
+        </div>
+
+        <div class="w3-display-container mySlides">
+            <img src="../images/photobooth2.webp" style="width:100%" alt="Photobooth Picture 2">
+        </div>
+
+        <div class="w3-display-container mySlides">
+            <img src="../images/photobooth3.jpeg" style="width:100%" alt="Photobooth Picture 3">
+        </div>
+        <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+    </div>
     <div class="wrapper2">
         <div class="costs">
             <h1>Photo Booth</h1>
@@ -105,5 +123,24 @@
             <li><p>New Westminster, BC, Canada</p></li>
         </ul>
     </footer>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+        }
+    </script>
 </body>
 </html>

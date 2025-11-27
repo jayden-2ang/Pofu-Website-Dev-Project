@@ -59,7 +59,6 @@ nav ul li:not(:first-of-type) a:hover::after{
     border-top: solid 1px black;
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: white;
     grid-gap: 50px;
 }
 
@@ -68,16 +67,22 @@ nav ul li:not(:first-of-type) a:hover::after{
     height: 100%;
     width: 100%;
     position: relative;
+    text-align: center;
 }
 
 .wrapper2 .costs::before{
     content: '';
     background-image: url(./images/photomachine.webp);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     position: absolute;
     opacity: 0.5;
+    z-index: -1;
 }
 
 .wrapper2 #printout{
@@ -279,9 +284,17 @@ footer ul{
         grid-row: 1;
     }
 
-        .backdrops p {
+    .backdrops p {
         grid-column: 1 / 4;
         grid-row: 2;
+    }
+
+    .backdrops figure img{
+        transition: 1s;
+    }
+
+    .backdrops figure img:hover{
+        transform: scale(1.1, 1.1);
     }
 
     .wrapper{
@@ -313,17 +326,8 @@ footer ul{
         justify-self: center;
     }
 
-    #pb2{
-        padding-bottom: 50px;
-    }
-
     .wrapper2{
         grid-template-columns: 1fr 1fr;
-    }
-
-    .wrapper2 #machine{
-        grid-column: 2/3;
-        grid-row: 1/2;
     }
 
     .wrapper2 .costs{
@@ -366,19 +370,19 @@ footer ul{
         grid-row: 3/4;
     }
 
-    .backdrops{
+    .photography .photos{
+        grid-column: 1/4;
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
+        grid-gap: 80px;
+        padding: 20px;
     }
 
-    .backdrops h1
-    {
-        grid-column: 1/4;
-        grid-row: 1/2;
+    .photography .photos img{
+        transition: 1s;
     }
 
-    .backdrops p{
-        grid-column: 1/4;
-        grid-row: 2/3;
+    .photography .photos img:hover{
+        transform: scale(1.1, 1.1);
     }
 }
