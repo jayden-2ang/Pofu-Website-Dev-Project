@@ -176,7 +176,10 @@ function handle_form_submission() {
     $statement->bindValue(':details', $_POST['details'] ?? '');
     $statement->execute();
     $submitMessage = "Thank You! Your response has been submitted.";
-    echo "<script>alert('$submitMessage');</script>";
+    echo "<script>
+      alert('$submitMessage');
+      window.location.href = 'index.html';
+    </script>";
     exit();
 }
 ?>
