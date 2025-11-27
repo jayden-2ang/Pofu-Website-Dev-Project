@@ -6,6 +6,7 @@
     // Import functions
     require '../database/database.php';
 
+    //Validate input
     $pdo = db_connect();      
     validate();               
 
@@ -21,7 +22,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pofu Photography</title>
     <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 </head>
 <body>
     <header>
@@ -152,6 +152,7 @@
         </ul>
     </footer>
     <script>
+        //Double select list
         const backdropSelect = document.getElementById('backdropType');
         const nameSelect = document.getElementById('backdropName');
 
